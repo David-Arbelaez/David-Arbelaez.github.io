@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: rgb(255, 233, 233);
+  margin: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.leftPanel {
+  display: flex;
+  float: left;
+  width: 40%;
+}
+
+.leftPanel img{
+  padding-left: 80px;
+  height: 700px;
+}
+
+.rightPanel {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  float: right;
+  width: 60%;
+  padding-left: 50px;
+}
+
+.rightPanel h1 {
+  font-size: 80px;
+  font-family: DM Sans;
+  font-weight: 800;
+}
+
+.rightPanel h2 {
+  border-top: solid 5px black;
+  font-size: 60px;
+  font-family: DM Sans;
+  font-weight: 600;
+}
+
+.rightPanel a{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  border-radius: 40px;
+  border: solid 4px black;
+  justify-content: center;
+  padding: 10px 15px;
+  width: fit-content;
+  color: black;
+  text-decoration: none;
+  font-family: DM Sans;
+  font-size: 30px;
+}
+
+.rightPanel a:hover{
+  background-color: black;
+  cursor: pointer;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.rightPanel a:hover img {
+  filter: brightness(0) invert(1);
+  transition: all 0.3s ease;
+}
+
+
+.rightPanel img {
+  height: 40px;
+  padding-right: 20px;
+}
+
+.navBar{
+  display: flex;
+  width: 90%;
+  padding-left: 100px;
+  align-items: center;
+}
+
+.navBar nav ul{
+  display: flex;
+  align-items: center;
+}
+
+.navBar nav ul li{
+  list-style: none;
+}
+
+.navBar nav ul li a{
+  text-decoration: none;
+  font-family: DM Sans;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  padding: 10px 20px;
+  background-color: rgb(0, 0, 0);
+  font-weight: 100;
+}
+
+.navBar nav ul li a:hover{
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.description{
+  margin-bottom: 30px;
+  box-shadow: 10px 10px black;
+  padding: 40px;
+}
+
+.projects{
+  margin-bottom: 30px;
+  box-shadow: 10px 10px black;
+}
+
+.description, .projects {
+  display: flex;
+  width: 90%;
+  font-family: DM Sans;
+  font-size: 20px;
+  background-color: rgb(255, 255, 255);
+  margin-left: 5%;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+.navBar a.active {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+.projects {
+  flex-direction: column;
+  padding: 20px 0px;
+}
+
+.dataAnalyst, .discordBot, .sortingScript, .stackOverflowQuestions{
+  border-bottom: solid 1px black;
+  width: 100%;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.dataAnalyst img, .discordBot img, .sortingScript img, .stackOverflowQuestions img{
+  display: flex;
+  height: 30px;
+  padding: 1px;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-family: 'Michroma', sans-serif;
+  color: black;
+  text-decoration: none;
+  padding: 30px 0px;
+  align-items: center;
+}
+
+.title img {
+  height: 16px;
+  float: left;
+}
+
+.title:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.content{
+  display: flex;
+}
+
+.content p{
+  font-size: 20px;
+  font-weight: 300;
+  padding-top: 30px;
+  padding-right: 30px;
+}
+
+.article{
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+  width: 50%;
+}
+
+.article div{
+  display: flex;
+  align-items: center;
+}
+
+.overview{
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.overview img{
+  width: auto;
+  padding: 0px 0px;
+}
+
+.gitLink{
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  padding-top: 20px;
+  color: black;
+  font-family: 'Michroma', sans-serif;
+}
+
+.gitLink:hover{
+  font-weight: bold;
+}
+
+.gitLink img{
+  height: 15px;
+}
+
+#projects,
+#contact {
+  display: none;
+}
+
+section {
+  transition: opacity 0.3s ease;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.carousel img {
+  max-width: 100%;
+  max-height: 400px;
+  height: auto;
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+
+.carousel .arrow {
+  position: absolute;
+  border: none;
+  top: 110%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+  z-index: 1;
+  user-select: none;
+  background-color: white;
+  padding-right: 20px;
+}
+
+.carousel .left {
+  left: 10px;
+}
+
+.carousel .right {
+  right: 10px;
+}
+
+.content {
+  display: none;
+  transition: max-height 0.3s ease;
+}
+
+.title img.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.title img {
+  transition: transform 0.3s ease;
+}
+
+.titles{
+  display: flex;
+}
+
+.socialMedia a{
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.socialMedia img{
+  height: 20px;
+  padding-right: 10px;
+}
